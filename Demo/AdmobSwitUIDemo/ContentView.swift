@@ -9,7 +9,7 @@ import SwiftUI
 import AdmobSwiftUI
 
 struct ContentView: View {
-    @StateObject private var nativeViewModel = NativeAdViewModel(requestInterval: 1)
+    @State private var nativeViewModel = NativeAdViewModel(requestInterval: 1)
     private let adViewControllerRepresentable = AdViewControllerRepresentable()
     private let adCoordinator = InterstitialAdCoordinator()
     private let rewardCoordinator = RewardedAdCoordinator()

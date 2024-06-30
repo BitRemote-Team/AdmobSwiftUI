@@ -4,7 +4,7 @@ import SwiftUI
 public struct NativeAdView: UIViewRepresentable {
     public typealias UIViewType = GADNativeAdView
     
-    @ObservedObject var nativeViewModel: NativeAdViewModel
+    var nativeViewModel: NativeAdViewModel
     var style: NativeAdViewStyle
     
     public init(nativeViewModel: NativeAdViewModel, style: NativeAdViewStyle = .basic) {

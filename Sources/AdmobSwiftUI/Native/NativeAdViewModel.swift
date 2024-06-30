@@ -6,11 +6,13 @@
 //
 
 import SwiftUI
+import Observation
 import GoogleMobileAds
 
-public class NativeAdViewModel: NSObject, ObservableObject, GADNativeAdLoaderDelegate {
-    @Published public var nativeAd: GADNativeAd?
-    @Published public var isLoading: Bool = false
+@Observable
+public class NativeAdViewModel: NSObject, GADNativeAdLoaderDelegate {
+    public var nativeAd: GADNativeAd?
+    public var isLoading: Bool = false
     private var adLoader: GADAdLoader!
     private var adUnitID: String
     private var lastRequestTime: Date?
